@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        var i = 0;
+        var arr = [
+            "bg1.jfif",
+            "bg2.webp",
+            "bg3.png",
+            "bg4.jfif",
+            "bg6.jpg"
+        ]
+        
+        
+
+        function pic() {
+            var body = document.body;
+            body.style.backgroundImage = "url(" + arr[i] + ")";
+            body.style.backgroundSize = "cover";
+            i++;
+            if (i >= arr.length) {
+                i = 0;
+            }
+        }
+
+        setInterval(pic, 1000);
+   
+
+
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Price Card</title>
 </head>
-<body>
+<body onload="pic()">
     <section class="container">
         <div class="card">
             <div class="details">
